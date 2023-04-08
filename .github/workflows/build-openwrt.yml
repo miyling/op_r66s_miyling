@@ -189,3 +189,6 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Bark notification
+      run: curl ${{ secrets.BARK_SERVER }}/${{ secrets.BARK_TOKEN }}/Openwrt编译/编译结束%5B${{ env.PACKAGED_STATUS }}%5D
