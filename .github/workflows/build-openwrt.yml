@@ -142,7 +142,7 @@ jobs:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         PACKAGE_SOC: r66s
         WHOAMI: miyling
-        DISTRIB_REVISION: R$(date +%m.%d) By Miyling
+        DISTRIB_REVISION: $(OPENWRT_VER) By Miyling
 
     - name: Upload artifact to Actions
       uses: miyling/upload-artifact-as-is@master
