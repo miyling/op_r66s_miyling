@@ -145,10 +145,10 @@ jobs:
         DISTRIB_REVISION: R$(date +%m.%d) By Miyling
 
     - name: Upload artifact to Actions
-      uses: actions/upload-artifact@v3
+      uses: miyling/upload-artifact-as-is@master
       if: env.PACKAGED_STATUS == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       with:
-        path: ${{ env.PACKAGED_OUTPUTPATH }}/
+        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
 
     - name: Upload OpenWrt Firmware to Release
       id: release
