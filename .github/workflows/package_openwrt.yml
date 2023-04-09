@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Package Armvirt as OpenWrt
-      if: true && !cancelled()
       uses: ophub/flippy-openwrt-actions@main
       env:
         OPENWRT_ARMVIRT: ${{ github.event.inputs.armvirt_url }}
@@ -22,6 +21,6 @@ jobs:
         
     - name: Upload artifact to Actions
       uses: miyling/upload-artifact-as-is@master
-      if: true && !cancelled()
+      if: env.PACKAGED_STATUS == 'success' && !cancelled()
       with:
         path: ${{ env.PACKAGED_OUTPUTPATH }}/*
