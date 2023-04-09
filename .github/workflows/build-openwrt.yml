@@ -32,8 +32,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: openwrt_armvirt
-  PRODUCT_NAME: openwrt_armvirt
+  FILE_NAME: r66s
+  PRODUCT_NAME: r66s
 
 jobs:
   build:
