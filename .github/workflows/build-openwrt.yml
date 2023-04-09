@@ -135,15 +135,6 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
-    - name: Upload armvirt directory to Actions
-      uses: actions/upload-artifact@v2
-      if: steps.organize.outputs.status == 'success' && !cancelled()
-      with:
-        name: armvirt_64_directory_${{ env.FILE_DATE }}
-        path: ${{ env.TMPFILEPATH }}
-        retention-days: ${{ env.RECENT_LASTEST }}
-        if-no-files-found: ignore
-
     - name: Package Armvirt as OpenWrt
       if: steps.compile.outputs.status == 'success' && !cancelled()
       uses: ophub/flippy-openwrt-actions@main
