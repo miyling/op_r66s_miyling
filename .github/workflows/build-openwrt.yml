@@ -169,8 +169,6 @@ jobs:
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        repository: ${{ github.repository }}
         retain_days: 1
         keep_minimum_runs: 3
 
@@ -184,4 +182,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Bark notification
-      run: curl ${{ secrets.BARK_SERVER }}/${{ secrets.BARK_TOKEN }}/Openwrt编译/编译结束%5B${{ env.PACKAGED_STATUS }}%5D
+      run: curl ${{ secrets.BARK_SERVER }}/${{ secrets.BARK_TOKEN }}/Openwrt编译/编译结束
