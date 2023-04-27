@@ -142,6 +142,7 @@ jobs:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         PACKAGE_SOC: r66s
         WHOAMI: miyling
+        OPENWRT_VER: R$(date +%y.%-m.%-d)
         DISTRIB_REVISION: $OPENWRT_VER By Miyling
 
     - name: Upload artifact to Actions
@@ -157,6 +158,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
         allowUpdates: true
+        removeArtifacts: true
         tag: ${{ env.FILE_NAME }}
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
