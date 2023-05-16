@@ -37,3 +37,6 @@ git clone https://github.com/ophub/luci-app-amlogic package/luci-app-amlogic
 # feeds up
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+# remove error patch
+rm -f target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
