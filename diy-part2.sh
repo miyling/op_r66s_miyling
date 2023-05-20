@@ -18,7 +18,10 @@ git clone https://github.com/xiaorouji/openwrt-passwall -b packages package/pass
 git clone https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-new-version package/luci-app-passwall
 
 # ddns-go
-git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
+# git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
+
+# lucky
+git clone https://github.com/sirpdboy/luci-app-lucky package/lucky
 
 # smartdns
 git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
