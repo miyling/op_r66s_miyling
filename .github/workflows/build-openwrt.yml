@@ -140,7 +140,6 @@ jobs:
       uses: ophub/flippy-openwrt-actions@main
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
-        KERNEL_REPO_URL: miyling/op_r66s_miyling
         PACKAGE_SOC: r66s
         WHOAMI: miyling
         OPENWRT_VER: R$(date +%y.%-m.%-d)
