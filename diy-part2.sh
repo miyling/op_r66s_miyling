@@ -33,8 +33,8 @@ function merge_package(){
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 师夷长技以制夷
-git clone https://github.com/xiaorouji/openwrt-passwall -b packages package/passwall_packages
-git clone https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-new-version package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall_packages
+git clone https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 
 # ddns-go
 # git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
