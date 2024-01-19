@@ -59,3 +59,6 @@ git clone https://github.com/ophub/luci-app-amlogic package/luci-app-amlogic
 # feeds up
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+# fix xfsprogs error
+sed -i 's/-DHAVE_MAP_SYNC/-DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/g' feeds/packages/utils/xfsprogs/Makefile
