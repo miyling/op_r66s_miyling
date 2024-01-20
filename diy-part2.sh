@@ -34,7 +34,7 @@ function merge_package(){
 
 # 师夷长技以制夷
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall_packages
-git clone https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev package/luci-app-passwall
 
 # ddns-go
 # git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
