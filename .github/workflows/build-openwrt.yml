@@ -61,6 +61,10 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
+    - name: Chcek environment
+      run: |
+        gcc --version && g++ --version
+
     - name: Clone source code
       working-directory: /workdir
       run: |
