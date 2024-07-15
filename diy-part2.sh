@@ -53,6 +53,9 @@ rm -rf feeds/packages/utils/watchcat
 merge_package master https://github.com/openwrt/packages feeds/packages/utils utils/watchcat
 git clone https://github.com/gngpp/luci-app-watchcat-plus package/luci-app-watchcat-plus
 
+# openclash
+git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
+
 # 晶晨宝盒
 git clone https://github.com/ophub/luci-app-amlogic package/luci-app-amlogic
 
