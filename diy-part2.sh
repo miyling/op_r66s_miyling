@@ -59,6 +59,9 @@ git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
 # 晶晨宝盒
 git clone https://github.com/ophub/luci-app-amlogic package/luci-app-amlogic
 
+# alpha theme
+git clone https://github.com/derisamedia/luci-theme-alpha package/luci-theme-alpha
+
 # feeds up
 ./scripts/feeds update -a
 ./scripts/feeds install -a
