@@ -30,7 +30,7 @@ function merge_package(){
 }
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.1.30.254/g' package/base-files/files/bin/config_generate
 
 # 师夷长技以制夷
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall_packages
