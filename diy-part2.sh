@@ -40,7 +40,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev pac
 # git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 
 # lucky
-git clone https://github.com/sirpdboy/luci-app-lucky package/lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # smartdns
 git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
