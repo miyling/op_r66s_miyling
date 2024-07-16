@@ -59,8 +59,14 @@ git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
 # 晶晨宝盒
 git clone https://github.com/ophub/luci-app-amlogic package/luci-app-amlogic
 
-# alpha theme
-git clone https://github.com/derisamedia/luci-theme-alpha package/luci-theme-alpha
+# argon theme
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
+
+# mosdns
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # feeds up
 ./scripts/feeds update -a
