@@ -37,7 +37,7 @@ jobs:
     - name: Package Armvirt as OpenWrt
       uses: ophub/flippy-openwrt-actions@main
       env:
-        OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
+        OPENWRT_ARMVIRT: https://github.com/miyling/op_r66s_miyling/releases/download/rootfs/openwrt-armvirt-64-generic-rootfs.tar.gz
         PACKAGE_SOC: r66s
         WHOAMI: miyling
         OPENWRT_VER: R$(date +%y.%-m.%-d)
