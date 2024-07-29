@@ -208,7 +208,7 @@ jobs:
       uses: miyling/upload-artifact-as-is@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       with:
-        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        path: ${{ env.FIRMWARE }}/*
 
     - name: Upload OpenWrt Firmware to Release
       id: release
