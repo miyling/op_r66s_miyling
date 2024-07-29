@@ -34,7 +34,7 @@ sed -i 's/192.168.1.1/10.1.30.254/g' package/base-files/files/bin/config_generat
 
 # 师夷长技以制夷
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall_packages
-git clone https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 
 # ddns-go
 # git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
