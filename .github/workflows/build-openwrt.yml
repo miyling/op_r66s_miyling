@@ -32,8 +32,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: r66s
-  PRODUCT_NAME: r66s
+  FILE_NAME: rootfs
+  PRODUCT_NAME: rootfs
 
 jobs:
   build:
@@ -203,17 +203,7 @@ jobs:
     - name: Check space usage
       if: (!cancelled())
       run: df -hT
-
-    - name: Package Armvirt as OpenWrt
-      if: steps.compile.outputs.status == 'success' && !cancelled()
-      uses: ophub/flippy-openwrt-actions@main
-      env:
-        OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
-        PACKAGE_SOC: r66s
-        WHOAMI: miyling
-        OPENWRT_VER: R$(date +%y.%-m.%-d)
-        DISTRIB_REVISION: $OPENWRT_VER By Miyling
-
+      
     - name: Upload artifact to Actions
       uses: miyling/upload-artifact-as-is@master
       if: env.PACKAGED_STATUS == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
@@ -231,9 +221,9 @@ jobs:
         tag: ${{ env.FILE_NAME }}
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
-        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        artifacts: ${{ env.FIRMWARE }}/*
         body: |
-          默认IP： 192.168.1.1 默认密码： password
+          rootfs底包，非完整固件，默认IP： 192.168.1.1 默认密码： password
           当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
           ${{ env.useVersionInfo }}
 
