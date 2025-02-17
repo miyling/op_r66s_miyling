@@ -212,12 +212,11 @@ jobs:
 
     - name: Upload OpenWrt Firmware to Release
       id: release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
         allowUpdates: true
-        removeArtifacts: true
         tag: ${{ env.FILE_NAME }}
         commit: main
         token: ${{ secrets.RELEASE_TOKEN }}
