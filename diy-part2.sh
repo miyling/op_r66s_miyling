@@ -43,7 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwa
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # smartdns
-git clone https://github.com/pymumu/luci-app-smartdns -b lede package/luci-app-smartdns
+git clone https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 
 # ad home
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
